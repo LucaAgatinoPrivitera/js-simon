@@ -4,7 +4,7 @@ let numeri = [];
 let userNumbers = [];
 
 
-btn.addEventListener("click", cancellaTesto()); //problema col click, lo script pensa che clicco ad ogni avvio della pagina
+btn.addEventListener("click", cancellaTesto); //problema col click, lo script pensa che clicco ad ogni avvio della pagina... RISOLTO bastava togliere le parentesi da "cancellaTesto()"
 
 setTimeout(cancellaTesto, 5 * 1000); //funziona ma ho sempre quel problema col click
 
@@ -29,7 +29,7 @@ setTimeout(cancellaTesto, 5 * 1000); //funziona ma ho sempre quel problema col c
 
 
 
-
+//Generazione dei numeri senza duplicati
 function generaNumeriSenzaDuplicati() {
     testoDaModificare.innerHTML = "";
     while (numeri.length < 5) {
@@ -42,13 +42,14 @@ function generaNumeriSenzaDuplicati() {
     return numeri;
 }
 
-
+//Wipe del testo
 function cancellaTesto() {
     testoDaModificare.classList.add("stealth"); //Mi mette opacity a 0
 }
 
+//Utente inserisci i numeri
 function inserisciNumeri() {
-    while (userNumbers.length <= numeri.length-1) {
+    while (userNumbers.length <= numeri.length - 1) {
         userSingleNumber = prompt("scrivi i tuoi numeri");
         userNumbers.push(userSingleNumber);
     }
