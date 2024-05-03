@@ -58,9 +58,19 @@ function inserisciNumeri() {
     while (userNumbers.length <= numeri.length - 1) {
         userSingleNumber = prompt("scrivi i tuoi numeri");
         userNumbers.push(userSingleNumber);
-        
+
         // parseInt(userNumbers.every); try ma non funziona
     }
     // parseInt(userNumbers); try ma non funziona
     console.log(userNumbers);
+}
+
+//Problema non funziona, penso che sia perché sono stringhe(?)
+function compare() {
+    if (userNumbers.includes(numeri)){
+        console.log("c'è")
+    }
+    else {
+        console.log("non c'è")
+    }
 }
