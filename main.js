@@ -3,11 +3,15 @@ let btn = document.querySelector("button");
 let numeri = [];
 let userNumbers = [];
 
-
+/*
 btn.addEventListener("click", generaNumeriSenzaDuplicati, setTimeout(cancellaTesto, 5 * 1000)); //problema col click, lo script pensa che clicco ad ogni avvio della pagina... RISOLTO bastava togliere le parentesi da "cancellaTesto()"
-
-setTimeout(cancellaTesto, 5 * 1000); //funziona ma ho sempre quel problema col click
-
+*/
+btn.addEventListener("click", function () {
+    generaNumeriSenzaDuplicati();
+    setTimeout(cancellaTesto, 5 * 1000);
+    console.log(numeri);
+    setTimeout(inserisciNumeri, 6 * 1000);
+});
 
 
 
@@ -40,7 +44,7 @@ function generaNumeriSenzaDuplicati() {
         }
     }
 
-    
+
     return numeri;
 }
 
@@ -54,5 +58,9 @@ function inserisciNumeri() {
     while (userNumbers.length <= numeri.length - 1) {
         userSingleNumber = prompt("scrivi i tuoi numeri");
         userNumbers.push(userSingleNumber);
+        
+        // parseInt(userNumbers.every); try ma non funziona
     }
+    // parseInt(userNumbers); try ma non funziona
+    console.log(userNumbers);
 }

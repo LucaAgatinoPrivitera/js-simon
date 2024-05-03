@@ -22,4 +22,5 @@ Dividete in piccoli problemi la consegna.
 Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
 Da chiedere:
-    come posso fare in modo da gestire lo spazio ad ognuno perché adesso li stampa e basta r.22
+    come posso fare in modo da gestire lo spazio ad ognuno perché adesso li stampa e basta "testoDaModificare.innerHTML = numeri"
+    I vari "try ma non funziona"
