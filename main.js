@@ -4,7 +4,7 @@ let numeri = [];
 let userNumbers = [];
 
 
-btn.addEventListener("click", cancellaTesto); //problema col click, lo script pensa che clicco ad ogni avvio della pagina... RISOLTO bastava togliere le parentesi da "cancellaTesto()"
+btn.addEventListener("click", generaNumeriSenzaDuplicati, setTimeout(cancellaTesto, 5 * 1000)); //problema col click, lo script pensa che clicco ad ogni avvio della pagina... RISOLTO bastava togliere le parentesi da "cancellaTesto()"
 
 setTimeout(cancellaTesto, 5 * 1000); //funziona ma ho sempre quel problema col click
 
@@ -39,6 +39,8 @@ function generaNumeriSenzaDuplicati() {
             testoDaModificare.innerHTML = numeri; //da chiedere come posso fare in modo da gestire lo spazio ad ognuno perché adesso li stampa e basta
         }
     }
+
+    
     return numeri;
 }
 
