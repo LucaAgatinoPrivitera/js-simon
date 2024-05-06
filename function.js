@@ -28,12 +28,29 @@ function inserisciNumeri() {
     console.log("I tuoi numeri sono " + `${userNumbers}`);
 }
 
+/*
 //Problema non funziona, penso che sia perché sono stringhe(?)
 function compare() {
+    // numeri.includes(parseInt(userNumbers[0]));
     if (userNumbers.includes(numeri[1])){
         console.log("c'è")
     }
     else {
         console.log("non c'è")
     }
+}
+*/
+
+function compare() {
+    // numeri.includes(parseInt(userNumbers[0]));
+    for (let i = 0; i < userNumbers.length; i++) {
+        if (numeri.includes(parseInt(userNumbers[i]))) {
+            console.log("c'è")
+            punteggio++;
+        }
+        else {
+            console.log("non c'è")
+        }
+    }
+
 }
